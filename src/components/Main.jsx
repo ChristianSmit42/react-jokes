@@ -13,7 +13,7 @@ export default function Main() {
     return (
         <main className={"Main"}>
             <h1>Main</h1>
-            <JokeCard></JokeCard>
+            {joke && <JokeCard joke={joke}></JokeCard>}
         </main>
     );
 }

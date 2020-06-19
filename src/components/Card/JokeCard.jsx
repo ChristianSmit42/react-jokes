@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function JokeCard() {
+export default function JokeCard(props) {
     const classes = useStyles();
     return (
         <Card className={"JokeCard"}>
@@ -20,11 +20,13 @@ export default function JokeCard() {
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                    Lizard
+                    {props.joke.type}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
+                    Setup: {props.joke.setup}
+                </Typography>
+                <Typography variant="body2" color="textPrimary" component="p">
+                    Punchline: {props.joke.punchline}
                 </Typography>
             </CardContent>
         </Card>
