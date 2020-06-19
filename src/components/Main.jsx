@@ -19,7 +19,7 @@ export default function Main() {
                     <JokeRandom></JokeRandom>
                 </Route>
                 <Route exact path={"/randomten"}>
-                    <h2>random Joke</h2>
+                    <h2>Ten awesome Jokes</h2>
                     <JokeTen></JokeTen>
                 </Route>
                 <Route path={"/"}>

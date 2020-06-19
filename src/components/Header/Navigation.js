@@ -1,6 +1,7 @@
 import {Button, Menu, MenuItem} from "@material-ui/core";
 import React from "react";
 import "./Navigation.css";
+import {Link} from "react-router-dom";
 
 export default function Navigation(){
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -25,9 +26,15 @@ export default function Navigation(){
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem onClick={handleClose}>
+                    <Link to="/random">random Joke</Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                    <Link to="/randomten">10 Jokes</Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                    <Link to="/">Home</Link>
+                </MenuItem>
             </Menu>
         </div>
     );
