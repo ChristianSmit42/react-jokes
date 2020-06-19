@@ -5,10 +5,10 @@ import React from "react";
 export default function LogoArea(){
     return(
         <Grid container direction="row" justify="space-around" alignItems="flex-start">
-            <Grid item xs={4}>
-                Bild
+            <Grid item xs={2}>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/71iXP+-teoL.png" alt="" width="100%"/>
             </Grid>
-            <Grid item xs={8}>
+            <Grid item xs={10}>
                 <h1>
                     JOKES ARE AWESOME
                 </h1>
