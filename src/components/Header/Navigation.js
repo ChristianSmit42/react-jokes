@@ -1,5 +1,6 @@
 import {Button, Menu, MenuItem} from "@material-ui/core";
 import React from "react";
+import "./Navigation.css";
 
 export default function Navigation(){
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -13,7 +14,7 @@ export default function Navigation(){
     };
 
     return(
-        <>
+        <div className={"buttonMenu"}>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                 Open Menu
             </Button>
@@ -28,6 +29,6 @@ export default function Navigation(){
                 <MenuItem onClick={handleClose}>My account</MenuItem>
                 <MenuItem onClick={handleClose}>Logout</MenuItem>
             </Menu>
-        </>
+        </div>
     );
 }
