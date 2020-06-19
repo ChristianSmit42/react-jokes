@@ -1,19 +1,31 @@
 import React, {useEffect, useState} from "react";
 import "./Main.css";
-import JokeCard from "./Card/JokeCard";
+import JokeRandom from "./pages/JokeRandom";
+import JokeTen from "./pages/JokeTen";
+import {Route, Switch} from "react-router";
 
 export default function Main() {
 
-    const [joke, setJoke] = useState();
 
-    useEffect(() => {
-            fetch("https://official-joke-api.appspot.com/random_joke").then(response => response.json()).then(data => setJoke(data))
-        },[]
-    );
+
+
+
     return (
         <main className={"Main"}>
-            <h1>Main</h1>
-            {joke && <JokeCard joke={joke}></JokeCard>}
+
+            <Switch>
+                <Route exact path={"/random"}>
+                    <h2>random Joke</h2>
+                    <JokeRandom></JokeRandom>
+                </Route>
+                <Route exact path={"/randomten"}>
+                    <h2>Ten awesome Jokes</h2>
+                    <JokeTen></JokeTen>
+                </Route>
+                <Route path={"/"}>
+                    <p>Wanna laugh?</p>
+                </Route>
+            </Switch>
         </main>
     );
 }
