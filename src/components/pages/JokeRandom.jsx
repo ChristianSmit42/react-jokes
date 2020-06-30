@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import JokeCard from "../Card/JokeCard";
+
 
 export default function JokeRandom() {
 
 
     const [joke, setJoke] = useState();
-
     useEffect(() => {
             fetch("https://official-joke-api.appspot.com/random_joke").then(response => response.json()).then(data => setJoke(data))
         }, []

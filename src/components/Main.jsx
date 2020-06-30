@@ -1,14 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import "./Main.css";
 import JokeRandom from "./pages/JokeRandom";
 import JokeTen from "./pages/JokeTen";
 import {Route, Switch} from "react-router";
 
 export default function Main() {
-
-
-
-
 
     return (
         <main className={"Main"}>
